@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional certificates of Mariam Khalil - Digital Forensics Specialist">
+  <meta name="author" content="Mariam Khalil">
+  <title>Certificates | Mariam Khalil</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="../index.html" class="header__logo">Mariam Khalil</a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Home</a></li>
+        <li><a href="skills.html" class="nav__link">Skills</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="certificates.html" class="nav__link">Certificates</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" id="certificates">
+      <h2 class="section__title">Certificates</h2>
+      <div class="grid">
+        <article class="card" onclick="openModal('../CodeAlpha.jpeg')" role="button" tabindex="0" aria-label="View Code Alpha Cybersecurity Internship certificate">
+          <h3 class="card__title">Code Alpha</h3>
+          <p class="card__content">Cybersecurity Internship</p>
+        </article>
+        <article class="card" onclick="openModal('../CodeAlpha_Recommendation.jpeg')" role="button" tabindex="0" aria-label="View Code Alpha Recommendation certificate">
+          <h3 class="card__title">Code Alpha</h3>
+          <p class="card__content">Recommendation Letter</p>
+        </article>
+        <article class="card" onclick="openModal('../ITCS.jpeg')" role="button" tabindex="0" aria-label="View ITCS certificate">
+          <h3 class="card__title">ITCS</h3>
+          <p class="card__content">Information Technology Certificate</p>
+        </article>
+        <article class="card" onclick="openModal('../Mahara_Tech.jpeg')" role="button" tabindex="0" aria-label="View MAHARA_TECH certificate">
+          <h3 class="card__title">MAHARA_TECH</h3>
+          <p class="card__content">Computer Network Fundamentals</p>
+        </article>
+        <article class="card" onclick="openModal('../ECU_Achieviment.jpeg')" role="button" tabindex="0" aria-label="View ECU Achievement certificate">
+          <h3 class="card__title">ECU</h3>
+          <p class="card__content">Achievement Award</p>
+        </article>
+        <article class="card" onclick="openModal('../NTRA.jpeg')" role="button" tabindex="0" aria-label="View NTRA certificate">
+          <h3 class="card__title">NTRA</h3>
+          <p class="card__content">Cybersecurity Program</p>
+        </article>
+        <article class="card" onclick="openModal('../Bankers.jpeg')" role="button" tabindex="0" aria-label="View Bankers certificate">
+          <h3 class="card__title">Bankers</h3>
+          <p class="card__content">Way to Be a Banker</p>
+        </article>
+        <article class="card" onclick="openModal('../MicrosoftChapter_1.jpeg')" role="button" tabindex="0" aria-label="View Microsoft Chapter GitHub certificate">
+          <h3 class="card__title">Microsoft Chapter</h3>
+          <p class="card__content">GitHub Fundamentals</p>
+        </article>
+        <article class="card" onclick="openModal('../MicrosoftChapter_2.jpeg')" role="button" tabindex="0" aria-label="View Microsoft Chapter Technology certificate">
+          <h3 class="card__title">Microsoft Chapter</h3>
+          <p class="card__content">Technology Essentials</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Close modal">&times;</button>
+      <img id="modal-img" class="modal__image" src="" alt="Certificate" />
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p class="footer__text">© 2026 Mariam Khalil | Digital Forensics Specialist</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

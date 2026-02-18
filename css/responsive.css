@@ -1,0 +1,150 @@
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 6%;
+    --spacing-section: 5rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --font-size-2xl: 2rem;
+    --font-size-xl: 1.5rem;
+    --spacing-section: 4rem;
+  }
+  
+  .header {
+    padding: var(--spacing-sm) 5%;
+    flex-wrap: wrap;
+  }
+  
+  .header__logo {
+    font-size: var(--font-size-lg);
+  }
+  
+  .nav {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
+  
+  .nav__list {
+    gap: var(--spacing-sm);
+    justify-content: center;
+  }
+  
+  .nav__link {
+    font-size: var(--font-size-sm);
+  }
+  
+  .section {
+    padding: var(--spacing-section) 5%;
+  }
+  
+  .section--hero {
+    padding-top: calc(var(--header-height) + var(--spacing-xl));
+  }
+  
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__subtitle {
+    font-size: var(--font-size-md);
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal__content {
+    margin: var(--spacing-md);
+    padding: var(--spacing-lg);
+  }
+  
+  .contact__info {
+    font-size: var(--font-size-md);
+  }
+  
+  .about__text {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .header__logo {
+    font-size: var(--font-size-md);
+  }
+  
+  .nav__list {
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+  
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+  
+  .card {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .section--hero {
+    min-height: auto;
+    padding: calc(var(--header-height) + var(--spacing-xl)) var(--container-padding) var(--spacing-xl);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .footer,
+  .btn {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+  }
+}

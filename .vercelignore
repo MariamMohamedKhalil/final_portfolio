@@ -1,0 +1,14 @@
+node_modules
+.git
+.vscode
+*.md
+!README.md
+.editorconfig
+.eslintrc.json
+.prettierrc
+*.jpeg
+*.jpg
+*.mp4
+CHANGELOG.md
+CONTRIBUTING.md
+TESTING.md
