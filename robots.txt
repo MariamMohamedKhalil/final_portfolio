@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow specific directories if needed
+Disallow: /.vscode/
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml

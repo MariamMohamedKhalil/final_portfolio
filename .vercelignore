@@ -1,0 +1,13 @@
+# Documentation
+*.md
+!README.md
+
+# Development files
+.vscode
+.editorconfig
+.eslintrc.json
+.prettierrc
+
+# Git
+.git
+.gitignore

@@ -1,0 +1,334 @@
+/* ============================================
+   Component Styles (BEM Methodology)
+   ============================================ */
+
+/* Header Component */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-md) var(--container-padding);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: var(--backdrop-blur);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: var(--z-header);
+  transition: background var(--transition-base);
+}
+
+.header--scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: var(--shadow-md);
+}
+
+.header__logo {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  transition: transform var(--transition-fast);
+}
+
+.header__logo:hover {
+  transform: scale(1.05);
+}
+
+.nav__list {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+}
+
+.nav__link {
+  position: relative;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  transition: color var(--transition-base);
+  padding: var(--spacing-xs) 0;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-primary);
+}
+
+.nav__link:hover::after,
+.nav__link--active::after {
+  width: 100%;
+}
+
+/* Section Component */
+.section {
+  padding: var(--spacing-section) var(--container-padding);
+  min-height: 100vh;
+}
+
+.section--hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  display: inline-block;
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+/* Hero Component */
+.hero__title {
+  font-size: clamp(2rem, 5vw, var(--font-size-2xl));
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  min-height: 40px;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Button Component */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  background: var(--color-primary);
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+  background: var(--color-primary-light);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Grid Component */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+/* Card Component */
+.card {
+  background: var(--color-bg-card);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  backdrop-filter: var(--backdrop-blur);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.card__title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+}
+
+.card__content {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-base);
+}
+
+.card__media {
+  margin-top: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+/* Modal Component */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: var(--z-modal);
+  overflow: auto;
+  animation: fadeIn var(--transition-base);
+}
+
+.modal--active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  position: relative;
+  background: var(--color-bg-primary);
+  margin: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  max-width: 800px;
+  width: 90%;
+  border: 1px solid var(--color-primary);
+  animation: slideUp var(--transition-base);
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__close:hover {
+  color: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+.modal__image {
+  width: 100%;
+  border-radius: var(--radius-sm);
+}
+
+/* Footer Component */
+.footer {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--color-bg-secondary);
+  margin-top: var(--spacing-2xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__text {
+  color: var(--color-text-secondary);
+}
+
+.footer__link {
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--color-primary-light);
+}
+
+/* Contact Component */
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.contact__label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+.contact__link {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.contact__link:hover {
+  color: var(--color-primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading State */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
