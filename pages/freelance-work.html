@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Cybersecurity Services - Security Audits, Incident Response, SOC Analysis">
+  <meta name="author" content="Mariam Khalil">
+  <title>Freelance Services | Mariam Khalil</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/freelance.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="../index.html" class="header__logo">Mariam Khalil</a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Home</a></li>
+        <li><a href="skills.html" class="nav__link">Skills</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="certificates.html" class="nav__link">Certificates</a></li>
+        <li><a href="freelance-work.html" class="nav__link">Freelance Services</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section section--hero freelance-hero">
+      <h1 class="hero__title">Professional Cybersecurity Services</h1>
+      <p class="hero__subtitle">Security Audits • Incident Response • SOC Analysis • Digital Forensics</p>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number">50+</span>
+          <span class="stat__label">Pages of Documentation</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">4</span>
+          <span class="stat__label">Service Offerings</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">15K+</span>
+          <span class="stat__label">Words Written</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section" id="services">
+      <h2 class="section__title">Service Offerings</h2>
+      <div class="services-grid">
+        
+        <!-- Service 1: Security Audit -->
+        <article class="service-card" data-service="security-audit">
+          <div class="service-card__icon">🔒</div>
+          <h3 class="service-card__title">Security Audit & Penetration Testing</h3>
+          <p class="service-card__description">
+            Comprehensive vulnerability assessment and penetration testing following OWASP Top 10 methodology.
+          </p>
+          <div class="service-card__details">
+            <div class="detail">
+              <span class="detail__label">Duration:</span>
+              <span class="detail__value">1-2 weeks</span>
+            </div>
+            <div class="detail">
+              <span class="detail__label">Price Range:</span>
+              <span class="detail__value">$2,000 - $5,000</span>
+            </div>
+          </div>
+          <ul class="service-card__features">
+            <li>✓ Vulnerability Scanning</li>
+            <li>✓ Penetration Testing</li>
+            <li>✓ Configuration Review</li>
+            <li>✓ Compliance Assessment</li>
+            <li>✓ Remediation Roadmap</li>
+          </ul>
+          <button class="btn btn--service" onclick="viewSample('security-audit')">View Sample Report</button>
+        </article>
+
+        <!-- Service 2: Incident Response -->
+        <article class="service-card" data-service="incident-response">
+          <div class="service-card__icon">🚨</div>
+          <h3 class="service-card__title">Incident Response & Forensics</h3>
+          <p class="service-card__description">
+            Emergency incident response with complete forensic investigation and root cause analysis.
+          </p>
+          <div class="service-card__details">
+            <div class="detail">
+              <span class="detail__label">Duration:</span>
+              <span class="detail__value">1-3 days</span>
+            </div>
+            <div class="detail">
+              <span class="detail__label">Price Range:</span>
+              <span class="detail__value">$1,500 - $4,000</span>
+            </div>
+          </div>
+          <ul class="service-card__features">
+            <li>✓ Incident Containment</li>
+            <li>✓ Forensic Analysis</li>
+            <li>✓ Root Cause Identification</li>
+            <li>✓ IOC Extraction</li>
+            <li>✓ Remediation Guidance</li>
+          </ul>
+          <button class="btn btn--service" onclick="viewSample('incident-response')">View Sample Playbook</button>
+        </article>
+
+        <!-- Service 3: Network Forensics -->
+        <article class="service-card" data-service="network-forensics">
+          <div class="service-card__icon">🔍</div>
+          <h3 class="service-card__title">Network Forensics Analysis</h3>
+          <p class="service-card__description">
+            Deep packet inspection and network traffic analysis to identify security breaches and data exfiltration.
+          </p>
+          <div class="service-card__details">
+            <div class="detail">
+              <span class="detail__label">Duration:</span>
+              <span class="detail__value">3-5 days</span>
+            </div>
+            <div class="detail">
+              <span class="detail__label">Price Range:</span>
+              <span class="detail__value">$1,500 - $3,500</span>
+            </div>
+          </div>
+          <ul class="service-card__features">
+            <li>✓ PCAP Analysis</li>
+            <li>✓ Malware Investigation</li>
+            <li>✓ Data Breach Assessment</li>
+            <li>✓ IOC Identification</li>
+            <li>✓ Attribution Analysis</li>
+          </ul>
+          <button class="btn btn--service" onclick="viewSample('network-forensics')">View Sample Analysis</button>
+        </article>
+
+        <!-- Service 4: SOC Analyst -->
+        <article class="service-card" data-service="soc-analyst">
+          <div class="service-card__icon">📊</div>
+          <h3 class="service-card__title">SOC Analyst Services</h3>
+          <p class="service-card__description">
+            Ongoing security monitoring, alert triage, and incident management with detailed reporting.
+          </p>
+          <div class="service-card__details">
+            <div class="detail">
+              <span class="detail__label">Duration:</span>
+              <span class="detail__value">Monthly Retainer</span>
+            </div>
+            <div class="detail">
+              <span class="detail__label">Price Range:</span>
+              <span class="detail__value">$1,000 - $3,000/mo</span>
+            </div>
+          </div>
+          <ul class="service-card__features">
+            <li>✓ 24/7 Monitoring</li>
+            <li>✓ Alert Triage</li>
+            <li>✓ Incident Response</li>
+            <li>✓ Threat Intelligence</li>
+            <li>✓ Monthly Reports</li>
+          </ul>
+          <button class="btn btn--service" onclick="viewSample('soc-analyst')">View Sample Report</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Featured Demo Project -->
+    <section class="section" id="demo-project" style="background: linear-gradient(135deg, rgba(255, 149, 0, 0.05) 0%, rgba(255, 204, 0, 0.05) 100%);">
+      <h2 class="section__title">🎯 Featured Demo Project</h2>
+      <p class="section__intro">
+        See a complete example of professional security risk assessment work
+      </p>
+      
+      <div class="demo-showcase" style="max-width: 900px; margin: var(--spacing-xl) auto; background: var(--color-bg-card); padding: var(--spacing-2xl); border-radius: var(--radius-md); border: 2px solid #ff9500;">
+        <div style="text-align: center; margin-bottom: var(--spacing-xl);">
+          <div style="font-size: 4rem; margin-bottom: var(--spacing-md);">🔐</div>
+          <h3 style="font-size: var(--font-size-xl); color: #ff9500; margin-bottom: var(--spacing-sm);">
+            Basic Security Risk Assessment
+          </h3>
+          <p style="color: var(--color-text-secondary); font-size: var(--font-size-lg);">
+            For Small Company (20 Employees)
+          </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-xl);">
+          <div style="text-align: center; padding: var(--spacing-md); background: rgba(255, 149, 0, 0.1); border-radius: var(--radius-sm);">
+            <div style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: #ff9500;">15</div>
+            <div style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Assets Identified</div>
+          </div>
+          <div style="text-align: center; padding: var(--spacing-md); background: rgba(255, 149, 0, 0.1); border-radius: var(--radius-sm);">
+            <div style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: #ff9500;">8</div>
+            <div style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Major Threats</div>
+          </div>
+          <div style="text-align: center; padding: var(--spacing-md); background: rgba(255, 149, 0, 0.1); border-radius: var(--radius-sm);">
+            <div style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: #ff9500;">12</div>
+            <div style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Vulnerabilities</div>
+          </div>
+          <div style="text-align: center; padding: var(--spacing-md); background: rgba(255, 149, 0, 0.1); border-radius: var(--radius-sm);">
+            <div style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: #ff9500;">6.8/10</div>
+            <div style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Risk Score</div>
+          </div>
+        </div>
+        
+        <div style="text-align: center;">
+          <a href="risk-assessment-demo.html" class="btn" style="background: #ff9500; margin-right: var(--spacing-sm);">View Interactive Demo</a>
+          <a href="../freelance-projects/risk-assessment/README.md" class="btn" style="background: transparent; border: 2px solid #ff9500; color: #ff9500;" target="_blank">Read Full Report</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample Work Section -->
+    <section class="section section--dark" id="samples">
+      <h2 class="section__title">Sample Deliverables</h2>
+      <p class="section__intro">
+        Professional documentation demonstrating expertise in cybersecurity analysis and reporting.
+      </p>
+      
+      <div class="samples-container">
+        <div class="sample-item">
+          <div class="sample-item__header">
+            <span class="sample-item__icon">📄</span>
+            <h3 class="sample-item__title">Security Audit Report</h3>
+          </div>
+          <p class="sample-item__description">
+            Comprehensive 30-page security assessment identifying critical vulnerabilities with CVSS scoring and remediation roadmap.
+          </p>
+          <div class="sample-item__metrics">
+            <span class="metric">3 Critical Issues</span>
+            <span class="metric">7 High-Risk</span>
+            <span class="metric">12 Medium</span>
+          </div>
+          <a href="../freelance-projects/security-audit-report/README.md" class="sample-item__link" target="_blank">
+            View Full Report →
+          </a>
+        </div>
+
+        <div class="sample-item">
+          <div class="sample-item__header">
+            <span class="sample-item__icon">📋</span>
+            <h3 class="sample-item__title">Incident Response Playbook</h3>
+          </div>
+          <p class="sample-item__description">
+            Step-by-step incident response procedures with forensic evidence collection and MITRE ATT&CK mapping.
+          </p>
+          <div class="sample-item__metrics">
+            <span class="metric">5 Phases</span>
+            <span class="metric">4 Severity Levels</span>
+            <span class="metric">Complete IR Framework</span>
+          </div>
+          <a href="../freelance-projects/security-audit-report/incident-response-playbook.md" class="sample-item__link" target="_blank">
+            View Playbook →
+          </a>
+        </div>
+
+        <div class="sample-item">
+          <div class="sample-item__header">
+            <span class="sample-item__icon">🌐</span>
+            <h3 class="sample-item__title">Network Forensics Analysis</h3>
+          </div>
+          <p class="sample-item__description">
+            Detailed network traffic analysis revealing data exfiltration with complete attack timeline and IOC extraction.
+          </p>
+          <div class="sample-item__metrics">
+            <span class="metric">2.3 GB Exfiltrated</span>
+            <span class="metric">6 Hour Attack</span>
+            <span class="metric">Full Attribution</span>
+          </div>
+          <a href="../freelance-projects/security-audit-report/network-forensics-analysis.md" class="sample-item__link" target="_blank">
+            View Analysis →
+          </a>
+        </div>
+
+        <div class="sample-item">
+          <div class="sample-item__header">
+            <span class="sample-item__icon">📈</span>
+            <h3 class="sample-item__title">SOC Daily Report</h3>
+          </div>
+          <p class="sample-item__description">
+            Professional SOC operations report covering 1,247 security events with incident summaries and KPI metrics.
+          </p>
+          <div class="sample-item__metrics">
+            <span class="metric">1,247 Alerts</span>
+            <span class="metric">3 Incidents</span>
+            <span class="metric">8 Min MTTD</span>
+          </div>
+          <a href="../freelance-projects/security-audit-report/soc-analyst-daily-report.md" class="sample-item__link" target="_blank">
+            View Report →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Technologies -->
+    <section class="section" id="tools">
+      <h2 class="section__title">Tools & Technologies</h2>
+      <div class="tools-grid">
+        <div class="tool-category">
+          <h3 class="tool-category__title">Security Testing</h3>
+          <ul class="tool-list">
+            <li>Burp Suite Professional</li>
+            <li>OWASP ZAP</li>
+            <li>Nmap</li>
+            <li>Metasploit</li>
+            <li>Nessus</li>
+            <li>SQLMap</li>
+          </ul>
+        </div>
+
+        <div class="tool-category">
+          <h3 class="tool-category__title">Forensics & Analysis</h3>
+          <ul class="tool-list">
+            <li>Wireshark</li>
+            <li>Autopsy</li>
+            <li>Volatility</li>
+            <li>FTK Imager</li>
+            <li>NetworkMiner</li>
+            <li>Zeek (Bro)</li>
+          </ul>
+        </div>
+
+        <div class="tool-category">
+          <h3 class="tool-category__title">SIEM & Monitoring</h3>
+          <ul class="tool-list">
+            <li>Splunk</li>
+            <li>ELK Stack</li>
+            <li>Suricata</li>
+            <li>Snort</li>
+            <li>AlienVault</li>
+            <li>OSSEC</li>
+          </ul>
+        </div>
+
+        <div class="tool-category">
+          <h3 class="tool-category__title">Operating Systems</h3>
+          <ul class="tool-list">
+            <li>Kali Linux</li>
+            <li>Windows Server</li>
+            <li>Ubuntu/CentOS</li>
+            <li>Parrot Security</li>
+            <li>SIFT Workstation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section--cta">
+      <div class="cta-content">
+        <h2 class="cta__title">Ready to Secure Your Infrastructure?</h2>
+        <p class="cta__description">
+          Get a professional security assessment or incident response service tailored to your needs.
+        </p>
+        <div class="cta__buttons">
+          <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+          <a href="../freelance-projects/security-audit-report/PROJECT_OVERVIEW.md" class="btn btn--secondary" target="_blank">View Full Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2026 Mariam Khalil | Digital Forensics Specialist & SOC Analyst</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script src="../js/freelance.js"></script>
+</body>
+</html>

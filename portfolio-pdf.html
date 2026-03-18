@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariam Khalil - Professional Portfolio</title>
+  <style>
+    @media print {
+      @page {
+        size: A4;
+        margin: 1.5cm;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 3px solid #00f0ff;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .header .title {
+      font-size: 1.3em;
+      color: #00f0ff;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .contact-info a {
+      color: #00f0ff;
+      text-decoration: none;
+    }
+
+    .section {
+      margin: 30px 0;
+    }
+
+    .section-title {
+      font-size: 1.8em;
+      color: #1a1a1a;
+      border-bottom: 2px solid #00f0ff;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      font-size: 1.05em;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill-item {
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #00f0ff;
+    }
+
+    .skill-item h3 {
+      font-size: 1.1em;
+      color: #1a1a1a;
+      margin-bottom: 5px;
+    }
+
+    .skill-item p {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .projects-list {
+      margin-top: 20px;
+    }
+
+    .project-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border-left: 4px solid #00f0ff;
+    }
+
+    .project-item h3 {
+      font-size: 1.2em;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .project-item p {
+      color: #666;
+      font-size: 0.95em;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      background: linear-gradient(135deg, #f0fcff 0%, #e6f9ff 100%);
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid #00f0ff;
+    }
+
+    .service-card h3 {
+      font-size: 1.3em;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .service-card .price {
+      font-size: 1.1em;
+      color: #00f0ff;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .service-card ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .service-card li {
+      margin: 5px 0;
+      color: #666;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      border-top: 2px solid #00f0ff;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .print-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #00f0ff;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .print-button:hover {
+      background: #00d4e6;
+    }
+
+    .highlight-box {
+      background: #fff9e6;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(135deg, #00f0ff 0%, #00b8c4 100%);
+      color: white;
+      border-radius: 8px;
+    }
+
+    .stat-box .number {
+      font-size: 2em;
+      font-weight: bold;
+      display: block;
+    }
+
+    .stat-box .label {
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="print-button no-print" onclick="window.print()">🖨️ Print to PDF</button>
+
+  <div class="header">
+    <h1>Mariam Mohamed Mohamed Khalil</h1>
+    <div class="title">Digital Forensics Specialist | SOC Analyst | Cybersecurity Professional</div>
+    <div class="contact-info">
+      <span>📧 mariamkhalil812005@gmail.com</span>
+      <span>🔗 <a href="https://github.com/MariamMohamedKhalil">GitHub</a></span>
+      <span>💼 <a href="https://www.linkedin.com/in/mariam-khalil-b80aa427b">LinkedIn</a></span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">About Me</h2>
+    <p class="about">
+      Passionate Cybersecurity professional with extensive expertise in SOC operations, Digital Forensics, 
+      and Security Analysis. Completed multiple specialized internships and advanced cybersecurity courses, 
+      including a comprehensive SOC diploma and active participation in the DEPI Digital Forensics initiative. 
+      Dedicated to continuous learning, advanced incident analysis, and strengthening technical and analytical 
+      capabilities in the cybersecurity domain. Proven track record in security auditing, incident response, 
+      and network forensics with hands-on experience in industry-standard tools and methodologies.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Professional Statistics</h2>
+    <div class="stats">
+      <div class="stat-box">
+        <span class="number">8+</span>
+        <span class="label">Core Skills</span>
+      </div>
+      <div class="stat-box">
+        <span class="number">9+</span>
+        <span class="label">Projects</span>
+      </div>
+      <div class="stat-box">
+        <span class="number">4</span>
+        <span class="label">Services</span>
+      </div>
+      <div class="stat-box">
+        <span class="number">10+</span>
+        <span class="label">Certificates</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section page-break">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h3>🔍 Incident Response</h3>
+        <p>Security incident analysis, threat detection, and comprehensive response procedures</p>
+      </div>
+      <div class="skill-item">
+        <h3>📊 SIEM & Splunk</h3>
+        <p>Security information and event management, log analysis, and correlation</p>
+      </div>
+      <div class="skill-item">
+        <h3>🔬 Autopsy & Digital Forensics</h3>
+        <p>Digital forensics investigation, evidence collection, and analysis tools</p>
+      </div>
+      <div class="skill-item">
+        <h3>🐧 Kali Linux</h3>
+        <p>Penetration testing, security auditing, and vulnerability assessment</p>
+      </div>
+      <div class="skill-item">
+        <h3>🌐 Networking & CCNA</h3>
+        <p>Network protocols, infrastructure design, and security implementation</p>
+      </div>
+      <div class="skill-item">
+        <h3>💻 C++ Programming</h3>
+        <p>System programming, algorithms, and data structures</p>
+      </div>
+      <div class="skill-item">
+        <h3>⚙️ C# Development</h3>
+        <p>Application development, .NET framework, and software engineering</p>
+      </div>
+      <div class="skill-item">
+        <h3>🤖 Machine Learning & AI</h3>
+        <p>Data analysis, predictive modeling, and intelligent systems</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section page-break">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-list">
+      <div class="project-item">
+        <h3>🏦 Auto Teller Machine System</h3>
+        <p>Comprehensive banking system simulation developed in C++ with secure transaction processing, 
+        account management, and user authentication features.</p>
+      </div>
+      <div class="project-item">
+        <h3>🔍 Basic Network Sniffer</h3>
+        <p>Network traffic analysis tool built with Python for packet capture, protocol analysis, 
+        and security monitoring capabilities.</p>
+      </div>
+      <div class="project-item">
+        <h3>🤖 Handwritten Digit Recognition</h3>
+        <p>Machine learning model using Support Vector Machine (SVM) algorithm for accurate 
+        digit classification with 95%+ accuracy rate.</p>
+      </div>
+      <div class="project-item">
+        <h3>🏨 Hotel Management System</h3>
+        <p>Complete hotel operations management system developed in C# featuring reservation management, 
+        room allocation, billing, and customer relationship management.</p>
+      </div>
+      <div class="project-item">
+        <h3>🎮 Tic Tac Toe with AI</h3>
+        <p>Classic game implementation in C# with intelligent AI opponent using minimax algorithm 
+        for optimal gameplay strategy.</p>
+      </div>
+      <div class="project-item">
+        <h3>🗼 Tower of Hanoi</h3>
+        <p>Recursive algorithm visualization in C++ demonstrating problem-solving techniques 
+        and algorithmic thinking.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section page-break">
+    <h2 class="section-title">Professional Freelance Services</h2>
+    
+    <div class="highlight-box">
+      <strong>🎯 Specialized Cybersecurity Services</strong><br>
+      Offering professional security services with comprehensive documentation, detailed analysis, 
+      and actionable recommendations for businesses of all sizes.
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>🔐 Security Audit & Penetration Testing</h3>
+        <div class="price">$2,000 - $5,000</div>
+        <p><strong>Duration:</strong> 1-2 weeks</p>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>Comprehensive 30+ page security audit report</li>
+          <li>Vulnerability assessment with CVSS scoring</li>
+          <li>Penetration testing results and evidence</li>
+          <li>Detailed remediation roadmap with priorities</li>
+          <li>Compliance assessment (ISO 27001, NIST, PCI-DSS)</li>
+          <li>Executive summary for stakeholders</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>🚨 Incident Response & Forensics</h3>
+        <div class="price">$1,500 - $4,000</div>
+        <p><strong>Duration:</strong> 1-3 days (emergency response available)</p>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>Complete incident response investigation</li>
+          <li>Digital forensics analysis and evidence collection</li>
+          <li>Root cause analysis and attack timeline</li>
+          <li>MITRE ATT&CK framework mapping</li>
+          <li>Containment and eradication procedures</li>
+          <li>Post-incident recommendations</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>🌐 Network Forensics Analysis</h3>
+        <div class="price">$1,500 - $3,500</div>
+        <p><strong>Duration:</strong> 3-5 days</p>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>Network traffic analysis report</li>
+          <li>Packet capture (PCAP) investigation</li>
+          <li>Malware analysis and IOC extraction</li>
+          <li>Attack vector identification</li>
+          <li>Network security recommendations</li>
+          <li>Threat intelligence integration</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>👁️ SOC Analyst Services</h3>
+        <div class="price">$1,000 - $3,000/month</div>
+        <p><strong>Duration:</strong> Monthly retainer</p>
+        <p><strong>Deliverables:</strong></p>
+        <ul>
+          <li>24/7 security monitoring and alert analysis</li>
+          <li>Daily/weekly security reports</li>
+          <li>Threat hunting and detection</li>
+          <li>SIEM management and optimization</li>
+          <li>Security metrics and KPI tracking</li>
+          <li>Incident escalation and coordination</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section page-break">
+    <h2 class="section-title">Tools & Technologies</h2>
+    <div class="highlight-box">
+      <strong>Security Tools:</strong> Splunk, Autopsy, Wireshark, Metasploit, Nmap, Burp Suite, 
+      Volatility, FTK Imager, Snort, Suricata<br><br>
+      <strong>Programming:</strong> Python, C++, C#, PowerShell, Bash<br><br>
+      <strong>Frameworks:</strong> MITRE ATT&CK, NIST Cybersecurity Framework, ISO 27001, OWASP Top 10<br><br>
+      <strong>Platforms:</strong> Kali Linux, Windows Server, Active Directory, Cloud Security (AWS, Azure)
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Education & Certifications</h2>
+    <div class="highlight-box">
+      <strong>🎓 Certifications Include:</strong><br>
+      • SOC Analyst Diploma<br>
+      • DEPI Digital Forensics Initiative<br>
+      • CCNA Networking<br>
+      • Cybersecurity Fundamentals<br>
+      • Machine Learning & AI<br>
+      • Multiple specialized security courses
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Mariam Mohamed Mohamed Khalil</strong></p>
+    <p>Digital Forensics Specialist | SOC Analyst | Cybersecurity Professional</p>
+    <p>📧 mariamkhalil812005@gmail.com | 🔗 GitHub: MariamMohamedKhalil</p>
+    <p>© 2026 All Rights Reserved</p>
+  </div>
+
+</body>
+</html>
